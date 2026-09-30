@@ -95,6 +95,14 @@ python -m PyInstaller --noconfirm --onefile --windowed --name WenTaoPet ^
 
 本项目为个人爱好作品，形象经用户本人授权的照片生成，仅限个人桌面使用，请勿商用或二次传播立绘素材。
 
+## 📥 下载
+
+前往 [Releases](https://github.com/DDDYYYu3d/Q-/releases) 页面，下载最新版 `WenTaoPet.zip`。
+解压后，双击 `文韬桌宠.exe` 即可运行。
+
+> 
+> ⚠️ 提示：Windows Defender 可能会误报，这是 PyInstaller 打包程序常见现象，源码开源可自查。
+
 ---
 
 *构建于 2026-09 · Python 3.13 · PySide6 6.11 · PyInstaller 6.22*
