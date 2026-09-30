@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>郭文韬桌宠 · 使用说明</title>
+<style>
+  :root{
+    --ink:#1c1f26; --ink2:#4a5160; --line:#e3e6ee; --bg:#f6f7fb;
+    --card:#ffffff; --blue:#3f7cf0; --pink:#ec5f8e; --amber:#e8a33d; --green:#2fa36b;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:32px 20px 60px; background:var(--bg); color:var(--ink);
+    font-family:"Microsoft YaHei UI","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.75; font-size:15px;
+  }
+  .wrap{max-width:880px; margin:0 auto;}
+  header{
+    background:linear-gradient(135deg,#2b3a5c,#3f7cf0 60%,#6aa3ff);
+    color:#fff; border-radius:18px; padding:28px 30px; box-shadow:0 10px 30px rgba(63,124,240,.25);
+  }
+  header h1{margin:0 0 6px; font-size:26px; letter-spacing:.5px;}
+  header p{margin:0; opacity:.9; font-size:14px;}
+  .hero{display:flex; gap:18px; align-items:center; margin-top:18px; flex-wrap:wrap;}
+  .hero img{height:120px; filter:drop-shadow(0 8px 16px rgba(0,0,0,.25));}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:22px 24px; margin-top:20px; box-shadow:0 4px 14px rgba(28,31,38,.05);
+  }
+  h2{font-size:18px; margin:0 0 14px; display:flex; align-items:center; gap:8px;}
+  h2 .n{
+    display:inline-flex; width:26px; height:26px; border-radius:9px; background:#eaf1fe;
+    color:var(--blue); font-size:14px; align-items:center; justify-content:center; font-weight:700;
+  }
+  h3{font-size:15px; margin:18px 0 8px; color:var(--ink);}
+  ul,ol{margin:8px 0; padding-left:22px;}
+  li{margin:5px 0;}
+  code{
+    background:#f0f2f7; border:1px solid var(--line); border-radius:6px;
+    padding:1px 6px; font-family:Consolas,monospace; font-size:13px;
+  }
+  table{width:100%; border-collapse:collapse; margin-top:10px; font-size:14px;}
+  th,td{border-bottom:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top;}
+  th{background:#fafbff; font-weight:600; color:var(--ink2); white-space:nowrap;}
+  tr:last-child td{border-bottom:none;}
+  .k{white-space:nowrap; font-weight:600;}
+  .tip{
+    background:#f2f8f4; border-left:4px solid var(--green); border-radius:0 10px 10px 0;
+    padding:10px 14px; margin:12px 0; font-size:14px; color:#215f42;
+  }
+  .warn{
+    background:#fdf6ec; border-left:4px solid var(--amber); border-radius:0 10px 10px 0;
+    padding:10px 14px; margin:12px 0; font-size:14px; color:#7a5312;
+  }
+  .gal{display:flex; gap:14px; flex-wrap:wrap; margin-top:12px;}
+  .gal figure{margin:0; flex:1 1 260px;}
+  .gal img{width:100%; border:1px solid var(--line); border-radius:12px; display:block;}
+  .gal figcaption{font-size:12.5px; color:var(--ink2); margin-top:6px; text-align:center;}
+  footer{text-align:center; color:#8d94a6; font-size:13px; margin-top:26px;}
+  .pill{
+    display:inline-block; background:#eef2f9; color:#41506b; border-radius:999px;
+    padding:2px 10px; font-size:12.5px; margin-right:6px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>郭文韬 · 桌面宠物</h1>
+    <p>写实立绘 · 透明贴纸式桌宠 · 单文件 EXE，无需安装 Python</p>
+    <div class="hero">
+      <img src="wentaopet/assets/idle.png" alt="桌宠形象">
+      <div>
+        <span class="pill">10 种姿态</span>
+        <span class="pill">对话气泡</span>
+        <span class="pill">粒子装饰</span>
+        <span class="pill">3 种待机动画</span>
+        <span class="pill">托盘图标</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2><span class="n">1</span>快速开始</h2>
+    <ol>
+      <li>双击 <code>文韬桌宠.exe</code>（就在本文件夹里）。</li>
+      <li><b>首次启动会等 1~3 秒</b>才出现——这是单文件程序自解压，属正常现象，之后就快了。</li>
+      <li>他会出现在屏幕右下角，直接开用。</li>
+    </ol>
+    <div class="tip">
+      <b>无需安装任何东西。</b>Python 解释器、Qt 界面库、运行库和素材都已经打包进这一个 exe，
+      拷到任何 <b>64 位 Windows 10 / 11</b> 电脑、甚至 U 盘，双击就能跑。
+    </div>
+    <div class="warn">
+      Win7 / Win8 或 32 位系统跑不了（要的话需要重新打包）。<br>
+      若杀毒软件误报，选择"允许 / 添加信任"即可——PyInstaller 打包程序常见的误报，不是病毒。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">2</span>基本操作</h2>
+    <table>
+      <tr><th>操作</th><th>效果</th></tr>
+      <tr>
+        <td class="k">按住左键拖动</td>
+        <td>把桌宠拖到任意位置；拖动时他会做<b>跑动姿势</b>并自动朝移动方向转身。<br>松手后位置自动记住，下次打开还在原地。</td>
+      </tr>
+      <tr>
+        <td class="k">单击角色</td>
+        <td>轮流触发三种互动：<b>跳跃 → 压扁回弹 → 左右抖动</b>（抖动时会换成惊讶表情），每次配一句随机台词 + 闪光粒子。</td>
+      </tr>
+      <tr>
+        <td class="k">滚轮上下滚</td>
+        <td>放大 / 缩小桌宠（大约 98px ~ 1050px 高），以脚底为基准缩放，不会乱跳位置。</td>
+      </tr>
+      <tr>
+        <td class="k">右键单击</td>
+        <td>弹出功能菜单（见下一节）。</td>
+      </tr>
+    </table>
+    <div class="tip">他闲下来时会有一点<b>待机小动作</b>和偶尔的自言自语，不用管他，他在自己玩。</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">3</span>右键菜单详解</h2>
+    <table>
+      <tr><th>菜单项</th><th>说明</th></tr>
+      <tr><td class="k">陪我聊聊天</td><td>换上黑西装造型，说一句随机的话，配音符 + 星星粒子。</td></tr>
+      <tr><td class="k">摸摸头</td><td>害羞挠头表情 + 蹦一下，冒爱心。</td></tr>
+      <tr><td class="k">喂吃的</td><td>丢一份食物（🍗🍜🍰🧋…）飞进他怀里，吃完换成端着碗吃饭的姿势，配爱心 + 彩带。</td></tr>
+      <tr><td class="k">让他走路</td><td>他会在屏幕上散步，碰到屏幕边缘自动折返，走 8~14 秒后停下（用走路专用的姿态）。</td></tr>
+      <tr><td class="k">让他睡觉</td><td>变成闭眼抱枕打瞌睡，画面变暗并飘出 Zzz。<b>点他一下就会醒来</b>（醒来会挥手打招呼）。</td></tr>
+      <tr><td class="k">跟随鼠标</td><td>勾选后他会一路小跑跟着你的鼠标；再点一次取消。<br>（手动拖动他时会自动取消跟随，避免打架。）</td></tr>
+      <tr><td class="k">调整大小</td><td>子菜单：放大一点 / 缩小一点 / 恢复默认大小。</td></tr>
+      <tr><td class="k">待机动画</td><td>三选一，随时切换：<br>
+        <b>呼吸</b>（默认，胸口轻微起伏）·<b>漂浮</b>（整只上下浮动）·<b>摇摆</b>（左右轻轻晃）</td></tr>
+      <tr><td class="k">窗口置顶</td><td>默认开着，他永远在最上层。取消勾选后会被其他窗口盖住，再勾回来即可。</td></tr>
+      <tr><td class="k">开机自启</td><td>勾选后每次开机自动出现。想关掉：取消勾选，或在<b>任务管理器 → 启动应用</b>里禁用 <code>WenTaoPet</code>。</td></tr>
+      <tr><td class="k">退出程序</td><td>保存好位置和设置后退出。（直接关机也没问题，会自动保存。）</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">4</span>托盘图标：找不到他时的救星</h2>
+    <ul>
+      <li>运行后任务栏右下角会出现一个小图标（托盘区），右键它有三个选项：<b>显示桌宠</b> / <b>窗口置顶</b> / <b>退出程序</b>。</li>
+      <li>桌宠被全屏窗口挡住、或不小心拖到屏幕外面看不见时，点<b>显示桌宠</b>就会把他拉回来。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">5</span>常见问题</h2>
+    <table>
+      <tr><th>情况</th><th>怎么办</th></tr>
+      <tr>
+        <td class="k">双击后没反应 / 等了几秒才出来</td>
+        <td>正常的，单文件 exe 要先自解压（1~3 秒）。若超过 10 秒还没出现，看看是不是被杀软拦了。</td>
+      </tr>
+      <tr>
+        <td class="k">提示"Windows 已保护你的电脑"</td>
+        <td>点"更多信息 → 仍要运行"，或给文件添加信任。</td>
+      </tr>
+      <tr>
+        <td class="k">桌宠不见了</td>
+        <td>看托盘图标 → 右键 → 显示桌宠。若托盘没有图标，就重新双击 exe（程序做了单实例保护，不会开出两只）。</td>
+      </tr>
+      <tr>
+        <td class="k">位置 / 大小记不住</td>
+        <td>设置保存在 <code>%APPDATA%\WenTaoPet\config.json</code>。删掉这个文件即恢复默认（右下角 + 默认大小）。</td>
+      </tr>
+      <tr>
+        <td class="k">同时打开两个会怎样</td>
+        <td>第二个会自动退出，只保留一只在跑。</td>
+      </tr>
+      <tr>
+        <td class="k">想换个形象 / 多几种姿势</td>
+        <td>给几张正脸清晰的照片就能重新生成写实立绘，做成新的姿态（跳跃、比心、生气等都可以加）。</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">6</span>文件说明</h2>
+    <table>
+      <tr><th>文件</th><th>用途</th></tr>
+      <tr><td class="k">文韬桌宠.exe</td><td>桌宠本体，双击运行（唯一需要保留的文件，可随意拷贝/放 U 盘）。</td></tr>
+      <tr><td class="k">效果预览.png</td><td>深色桌面下的整体效果参考（气泡 + 粒子）。</td></tr>
+      <tr><td class="k">wentaopet\素材预览.png</td><td>10 种姿态素材一览。</td></tr>
+      <tr><td class="k">wentaopet\</td><td>素材与源码目录（<code>main.py</code>、抠图脚本、AI 生成原图）。删掉不影响 exe 运行。</td></tr>
+    </table>
+    <div class="gal">
+      <figure>
+        <img src="效果预览.png" alt="效果预览">
+        <figcaption>深色桌面效果（气泡带指向尾巴 + 粒子装饰）</figcaption>
+      </figure>
+      <figure>
+        <img src="wentaopet/素材预览.png" alt="素材预览">
+        <figcaption>10 种姿态素材</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <footer>郭文韬桌宠 · 使用说明　|　基于 PySide6 (Qt) 构建，本机运行、不联网</footer>
+</div>
+</body>
+</html>
