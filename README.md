@@ -93,7 +93,7 @@ python -m PyInstaller --noconfirm --onefile --windowed --name WenTaoPet ^
 
 ## 八、声明
 
-本项目为个人爱好作品，形象经用户本人授权的照片生成，仅限个人桌面使用，请勿商用或二次传播立绘素材。
+本项目为个人爱好作品，仅限个人桌面使用，请勿商用或二次传播立绘素材。
 
 ## 📥 下载
 
